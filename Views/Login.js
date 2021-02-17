@@ -15,7 +15,7 @@ import { css } from "../assets/css/Css";
 export default function Login({ navigation }) {
   const [offset] = useState(new Animated.ValueXY({ x: 0, y: 95 }));
   const [opacity] = useState(new Animated.Value(0));
-  const [logo] = useState(new Animated.ValueXY({ x: 130, y: 155 }));
+  const [logo] = useState(new Animated.ValueXY({ x: 200, y: 155 }));
 
   useEffect(() => {
     keyboardDidShowListener = Keyboard.addListener(
@@ -43,7 +43,7 @@ export default function Login({ navigation }) {
   function keyboardDidShow() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 75,
+        toValue: 180,
         duration: 100,
       }),
       Animated.timing(logo.y, {
@@ -56,7 +56,7 @@ export default function Login({ navigation }) {
   function keyboardDidHide() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 130,
+        toValue: 200,
         duration: 100,
       }),
       Animated.timing(logo.y, {
@@ -77,7 +77,7 @@ export default function Login({ navigation }) {
             width: logo.x,
             height: logo.y,
           }}
-          source={require("../assets/images/logo.png")}
+          source={require("../assets/images/logo_adidas.webp")}
         />
       </View>
 
@@ -105,7 +105,10 @@ export default function Login({ navigation }) {
           secureTextEntry={true}
         />
 
-        <TouchableOpacity style={css.submitBtn}>
+        <TouchableOpacity
+          style={css.submitBtn}
+          onPress={() => navigation.navigate("Loja")}
+        >
           <Text style={css.submitText}>LOGIN</Text>
         </TouchableOpacity>
 

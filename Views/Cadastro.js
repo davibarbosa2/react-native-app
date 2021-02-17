@@ -15,7 +15,7 @@ import { css } from "../assets/css/Css";
 export default function Cadastro({ navigation }) {
   const [offset] = useState(new Animated.ValueXY({ x: 0, y: 95 }));
   const [opacity] = useState(new Animated.Value(0));
-  const [logo] = useState(new Animated.ValueXY({ x: 130, y: 155 }));
+  const [logo] = useState(new Animated.ValueXY({ x: 200, y: 155 }));
 
   useEffect(() => {
     keyboardDidShowListener = Keyboard.addListener(
@@ -31,7 +31,6 @@ export default function Cadastro({ navigation }) {
       Animated.spring(offset.y, {
         toValue: 0,
         speed: 4,
-        bounciness: 20,
       }),
       Animated.timing(opacity, {
         toValue: 1,
@@ -43,7 +42,7 @@ export default function Cadastro({ navigation }) {
   function keyboardDidShow() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 75,
+        toValue: 180,
         duration: 100,
       }),
       Animated.timing(logo.y, {
@@ -56,7 +55,7 @@ export default function Cadastro({ navigation }) {
   function keyboardDidHide() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 130,
+        toValue: 200,
         duration: 100,
       }),
       Animated.timing(logo.y, {
@@ -74,7 +73,7 @@ export default function Cadastro({ navigation }) {
             width: logo.x,
             height: logo.y,
           }}
-          source={require("../assets/images/logo.png")}
+          source={require("../assets/images/logo_adidas.webp")}
         />
       </View>
 

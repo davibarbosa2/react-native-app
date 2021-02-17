@@ -1,3 +1,4 @@
+import "react-native-gesture-handler";
 import React from "react";
 import { Text, View, Button, Alert } from "react-native";
 import { css } from "./assets/css/Css";
@@ -5,8 +6,20 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./Views/Login";
 import Cadastro from "./Views/Cadastro";
+import Loja from "./Views/Loja";
+import Detalhes from "./Views/Detalhes";
+import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
+import AppLoading from "expo-app-loading";
 
 export default function App() {
+  let [fontsLoaded] = useFonts({
+    Inter_900Black,
+  });
+
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
+
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
@@ -27,6 +40,21 @@ export default function App() {
             title: "Faça seu cadastro",
             headerTintColor: "#fff",
             headerTitleStyle: { fontWeight: "bold" },
+            headerShown: true,
+          }}
+        />
+        <Stack.Screen
+          name="Loja"
+          component={Loja}
+          options={{
+            headerShown: true,
+          }}
+        />
+
+        <Stack.Screen
+          name="Detalhes"
+          component={Detalhes}
+          options={{
             headerShown: true,
           }}
         />

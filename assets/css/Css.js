@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const css = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: "#191919",
+    backgroundColor: "black",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -53,6 +53,48 @@ const css = StyleSheet.create({
   registerText: {
     color: "#fff",
     fontFamily: "monospace",
+  },
+  textoLoja: {
+    marginTop: 60,
+    fontSize: 25,
+    fontFamily: "Inter_900Black",
+  },
+  containerLoja: {
+    flex: 1,
+    width: "100%",
+    backgroundColor: "#fff",
+  },
+  headerLoja: {
+    marginBottom: 8,
+  },
+  headerLoja: {
+    width: "100%",
+  },
+  textContainer: {
+    flexDirection: "row",
+    marginVertical: "5%",
+    marginHorizontal: "5%",
+  },
+  textHeader: {
+    fontFamily: "Inter_900Black",
+    fontSize: 22,
+    marginHorizontal: "1%",
+  },
+  line: {
+    borderBottomColor: "#d8d8d8",
+    borderBottomWidth: 2,
+  },
+  imagemTenis: {
+    width: 175,
+    height: 175,
+  },
+  textTenis: {
+    fontSize: 16,
+  },
+  containerTenis: {
+    paddingVertical: "2%",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
 
