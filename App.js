@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { Text, View, Button, Alert } from "react-native";
+import { css } from "./assets/css/Css";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Login from "./Views/Login";
+import Cadastro from "./Views/Cadastro";
 
 export default function App() {
+  const Stack = createStackNavigator();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            headerStyle: { backgroundColor: "#191919" },
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Cadastro"
+          component={Cadastro}
+          options={{
+            headerStyle: { backgroundColor: "#191919" },
+            title: "Faça seu cadastro",
+            headerTintColor: "#fff",
+            headerTitleStyle: { fontWeight: "bold" },
+            headerShown: true,
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
