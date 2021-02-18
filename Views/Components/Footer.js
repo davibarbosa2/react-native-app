@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, Image, ScrollView } from "react-native";
-import { css } from "../../assets/css/Css";
 import Produtos from "../Produtos";
 
 export default function Footer() {

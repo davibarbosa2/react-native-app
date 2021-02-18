@@ -3,7 +3,7 @@ import { StyleSheet, Dimensions } from "react-native";
 const css = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: "black",
+    backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -26,17 +26,21 @@ const css = StyleSheet.create({
     fontSize: 17,
     borderRadius: 7,
     padding: 10,
+    borderColor: "#000",
+    borderWidth: 2,
   },
   submitBtn: {
-    backgroundColor: "aquamarine",
+    backgroundColor: "#fff",
     width: "90%",
     height: "15%",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 7,
+    borderRadius: 0,
+    borderColor: "#000",
+    borderWidth: 2,
   },
   submitText: {
-    color: "white",
+    color: "#000",
     fontSize: 15,
     fontFamily: "monospace",
     fontWeight: "bold",
@@ -44,7 +48,7 @@ const css = StyleSheet.create({
   registerBtn: {
     marginTop: 10,
     backgroundColor: "#191919",
-    borderRadius: 7,
+    borderRadius: 0,
     width: "90%",
     height: "10%",
     alignItems: "center",

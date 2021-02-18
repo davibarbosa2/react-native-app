@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
-import { css } from "../assets/css/Css";
-import Cores from "./Components/Cores";
-import Tamanhos from "./Components/Tamanhos";
-import Button from "./Components/ButtonComprar";
-import Footer from "./Components/Footer";
+import { css } from "../../assets/css/Css";
+import Cores from "../Components/Cores";
+import Tamanhos from "../Components/Tamanhos";
+import Button from "../Components/ButtonComprar";
+import Footer from "../Components/Footer";
 
-export default function Loja({ navigation }) {
+export default function Detalhes({ navigation }) {
   navigation.setOptions({
     headerTitle: "Tênis Ultraboost 21",
   });
@@ -14,7 +14,7 @@ export default function Loja({ navigation }) {
   return (
     <ScrollView style={css.containerDetalhe}>
       <Image
-        source={require("../assets/images/detalhe-tenis.webp")}
+        source={require("../../assets/images/detalhe-tenis.webp")}
         style={css.imgDetalhe}
         resizeMode="cover"
       />

@@ -15,7 +15,7 @@ import { css } from "../assets/css/Css";
 export default function Login({ navigation }) {
   const [offset] = useState(new Animated.ValueXY({ x: 0, y: 95 }));
   const [opacity] = useState(new Animated.Value(0));
-  const [logo] = useState(new Animated.ValueXY({ x: 200, y: 155 }));
+  const [logo] = useState(new Animated.ValueXY({ x: 250, y: 220 }));
 
   useEffect(() => {
     keyboardDidShowListener = Keyboard.addListener(
@@ -43,11 +43,11 @@ export default function Login({ navigation }) {
   function keyboardDidShow() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 180,
+        toValue: 220,
         duration: 100,
       }),
       Animated.timing(logo.y, {
-        toValue: 85,
+        toValue: 200,
         duration: 100,
       }),
     ]).start();
@@ -56,11 +56,11 @@ export default function Login({ navigation }) {
   function keyboardDidHide() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 200,
+        toValue: 250,
         duration: 100,
       }),
       Animated.timing(logo.y, {
-        toValue: 155,
+        toValue: 220,
         duration: 100,
       }),
     ]).start();
@@ -77,7 +77,7 @@ export default function Login({ navigation }) {
             width: logo.x,
             height: logo.y,
           }}
-          source={require("../assets/images/logo_adidas.webp")}
+          source={require("../assets/images/logoAdidas.jpg")}
         />
       </View>
 

@@ -33,14 +33,14 @@ export default function Loja({ navigation }) {
         </Text>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
           <Produtos
-            onClick={() => navigation.navigate("Detalhes")}
+            onClick={() => navigation.navigate("Detalhes1")}
             img={require("../assets/images/tenis1.webp")}
             cost="R$399,90"
           >
-            Adidas Originals v1.0
+            Originals Tênis 3MC
           </Produtos>
           <Produtos
-            onClick={() => navigation.navigate("Detalhes")}
+            onClick={() => navigation.navigate("Detalhes2")}
             img={require("../assets/images/tenis2.webp")}
             cost="R$299,90"
           >
@@ -49,14 +49,14 @@ export default function Loja({ navigation }) {
         </View>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
           <Produtos
-            onClick={() => navigation.navigate("Detalhes")}
+            onClick={() => navigation.navigate("Detalhes3")}
             img={require("../assets/images/tenis3.webp")}
             cost="R$999,99"
           >
             Tênis Ultraboost 21
           </Produtos>
           <Produtos
-            onClick={() => navigation.navigate("Detalhes")}
+            onClick={() => navigation.navigate("Detalhes4")}
             img={require("../assets/images/tenis4.webp")}
             cost="R$399,99"
           >
@@ -65,18 +65,18 @@ export default function Loja({ navigation }) {
         </View>
         <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
           <Produtos
-            onClick={() => navigation.navigate("Detalhes")}
+            onClick={() => navigation.navigate("Detalhes5")}
             img={require("../assets/images/tenis5.webp")}
             cost="R$799,99"
           >
             Tênis NMD_R1 Spectoo
           </Produtos>
           <Produtos
-            onClick={() => navigation.navigate("Detalhes")}
+            onClick={() => navigation.navigate("Detalhes6")}
             img={require("../assets/images/tenis6.webp")}
             cost="R$499,90"
           >
-            CHANCLETAS HU
+            Sandálias Pharrell Williams HU Slides
           </Produtos>
         </View>
       </ScrollView>

@@ -42,11 +42,11 @@ export default function Cadastro({ navigation }) {
   function keyboardDidShow() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 180,
+        toValue: 220,
         duration: 100,
       }),
       Animated.timing(logo.y, {
-        toValue: 85,
+        toValue: 150,
         duration: 100,
       }),
     ]).start();
@@ -55,11 +55,11 @@ export default function Cadastro({ navigation }) {
   function keyboardDidHide() {
     Animated.parallel([
       Animated.timing(logo.x, {
-        toValue: 200,
+        toValue: 250,
         duration: 100,
       }),
       Animated.timing(logo.y, {
-        toValue: 155,
+        toValue: 220,
         duration: 100,
       }),
     ]).start();
@@ -73,7 +73,7 @@ export default function Cadastro({ navigation }) {
             width: logo.x,
             height: logo.y,
           }}
-          source={require("../assets/images/logo_adidas.webp")}
+          source={require("../assets/images/logoAdidas.jpg")}
         />
       </View>
 

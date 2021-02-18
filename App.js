@@ -6,7 +6,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./Views/Login";
 import Cadastro from "./Views/Cadastro";
 import Loja from "./Views/Loja";
-import Detalhes from "./Views/Detalhes";
+import Detalhes1 from "./Views/Details/Detalhes1";
+import Detalhes2 from "./Views/Details/Detalhes2";
+import Detalhes3 from "./Views/Details/Detalhes3";
+import Detalhes4 from "./Views/Details/Detalhes4";
+import Detalhes5 from "./Views/Details/Detalhes5";
+import Detalhes6 from "./Views/Details/Detalhes6";
 import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import AppLoading from "expo-app-loading";
 import { Feather } from "@expo/vector-icons";
@@ -40,7 +45,7 @@ export default function App() {
             title: "Faça seu cadastro",
             headerTintColor: "#fff",
             headerTitleStyle: { fontWeight: "bold" },
-            headerShown: true,
+            headerShown: false,
           }}
         />
         <Stack.Screen
@@ -52,8 +57,63 @@ export default function App() {
         />
 
         <Stack.Screen
-          name="Detalhes"
-          component={Detalhes}
+          name="Detalhes1"
+          component={Detalhes1}
+          options={{
+            headerRight: () => (
+              <TouchableOpacity style={{ marginRight: 15 }}>
+                <Feather name="shopping-cart" size={24} color="black" />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="Detalhes2"
+          component={Detalhes2}
+          options={{
+            headerRight: () => (
+              <TouchableOpacity style={{ marginRight: 15 }}>
+                <Feather name="shopping-cart" size={24} color="black" />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="Detalhes3"
+          component={Detalhes3}
+          options={{
+            headerRight: () => (
+              <TouchableOpacity style={{ marginRight: 15 }}>
+                <Feather name="shopping-cart" size={24} color="black" />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="Detalhes4"
+          component={Detalhes4}
+          options={{
+            headerRight: () => (
+              <TouchableOpacity style={{ marginRight: 15 }}>
+                <Feather name="shopping-cart" size={24} color="black" />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="Detalhes5"
+          component={Detalhes5}
+          options={{
+            headerRight: () => (
+              <TouchableOpacity style={{ marginRight: 15 }}>
+                <Feather name="shopping-cart" size={24} color="black" />
+              </TouchableOpacity>
+            ),
+          }}
+        />
+        <Stack.Screen
+          name="Detalhes6"
+          component={Detalhes6}
           options={{
             headerRight: () => (
               <TouchableOpacity style={{ marginRight: 15 }}>
