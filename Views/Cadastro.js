@@ -15,7 +15,7 @@ import { css } from "../assets/css/Css";
 export default function Cadastro({ navigation }) {
   const [offset] = useState(new Animated.ValueXY({ x: 0, y: 95 }));
   const [opacity] = useState(new Animated.Value(0));
-  const [logo] = useState(new Animated.ValueXY({ x: 200, y: 155 }));
+  const [logo] = useState(new Animated.ValueXY({ x: 250, y: 220 }));
 
   useEffect(() => {
     keyboardDidShowListener = Keyboard.addListener(
@@ -46,7 +46,7 @@ export default function Cadastro({ navigation }) {
         duration: 100,
       }),
       Animated.timing(logo.y, {
-        toValue: 150,
+        toValue: 200,
         duration: 100,
       }),
     ]).start();
