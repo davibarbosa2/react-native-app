@@ -9,7 +9,7 @@ export default function Loja({ navigation }) {
     <View style={css.containerLoja}>
       <View style={css.headerLoja}>
         <Image
-          source={require("../assets/images/banner-adidas2.jpg")}
+          source={require("../assets/images/banner.webp")}
           style={[css.headerLoja, { height: 150 }]}
         />
 
