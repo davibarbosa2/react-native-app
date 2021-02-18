@@ -117,9 +117,9 @@ export default function Cadastro({ navigation }) {
 
         <TouchableOpacity
           style={css.submitBtn}
-          onPress={() => navigation.navigate("Login")}
+          onPress={() => navigation.navigate("Loja")}
         >
-          <Text style={css.submitText}>LOGIN</Text>
+          <Text style={css.submitText}>FAZER LOGIN</Text>
         </TouchableOpacity>
       </Animated.View>
     </KeyboardAvoidingView>

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Dimensions } from "react-native";
 
 const css = StyleSheet.create({
   background: {
@@ -95,6 +95,70 @@ const css = StyleSheet.create({
     paddingVertical: "2%",
     alignItems: "center",
     justifyContent: "center",
+  },
+  containerDetalhe: {
+    flex: 1,
+    width: "100%",
+    backgroundColor: "#fff",
+  },
+  imgDetalhe: {
+    width: "100%",
+    height: 400,
+  },
+  titleDetalhe: {
+    fontFamily: "Inter_900Black",
+    paddingHorizontal: "2%",
+  },
+  coresDetalhe: {
+    flexDirection: "row",
+    marginVertical: "7%",
+  },
+  containerCores: {
+    width: Dimensions.get("window").width * 0.05,
+    height: Dimensions.get("window").width * 0.05,
+    borderRadius: (Dimensions.get("window").width * 0.05) / 2,
+    marginHorizontal: "2.5%",
+    elevation: 5,
+  },
+  containerTamanhos: {
+    width: 150,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 4,
+    borderColor: "#e6e6e6",
+    borderWidth: 3,
+    marginHorizontal: 10,
+  },
+  textTamanhos: {
+    color: "#fff",
+    fontSize: 18,
+  },
+  textTitleDetalhes: {
+    fontSize: 22,
+    marginVertical: "2%",
+  },
+  descricaoDetalhes: {
+    fontSize: 16,
+    lineHeight: 25,
+    marginVertical: "2%",
+    paddingHorizontal: "2%",
+  },
+  containerButton: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  button: {
+    width: "90%",
+    height: 50,
+    backgroundColor: "#17181a",
+    marginVertical: "5%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  textButton: {
+    color: "#fff",
+    fontSize: 17,
   },
 });
 

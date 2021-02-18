@@ -1,7 +1,6 @@
 import "react-native-gesture-handler";
 import React from "react";
-import { Text, View, Button, Alert } from "react-native";
-import { css } from "./assets/css/Css";
+import { TouchableOpacity } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./Views/Login";
@@ -10,6 +9,7 @@ import Loja from "./Views/Loja";
 import Detalhes from "./Views/Detalhes";
 import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import AppLoading from "expo-app-loading";
+import { Feather } from "@expo/vector-icons";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -55,7 +55,11 @@ export default function App() {
           name="Detalhes"
           component={Detalhes}
           options={{
-            headerShown: true,
+            headerRight: () => (
+              <TouchableOpacity style={{ marginRight: 15 }}>
+                <Feather name="shopping-cart" size={24} color="black" />
+              </TouchableOpacity>
+            ),
           }}
         />
       </Stack.Navigator>
